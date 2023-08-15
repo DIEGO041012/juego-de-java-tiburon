@@ -1,0 +1,37 @@
+.game-container {
+    position: relative;
+    width: 600px; /* Ajusta según tu diseño */
+    height: 400px; /* Ajusta según tu diseño */
+    margin: 0 auto;
+    background-color: black;
+  }
+  
+  .pacman {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    /* Ajusta las propiedades "top" y "left" para la posición inicial */
+    top: 180px;
+    left: 270px;
+    border-radius: 50%;
+  }
+  
+  .ghost {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    /* Ajusta las propiedades "top" y "left" para la posición inicial */
+    top: 100px;
+    left: 100px;
+  }
+  
+  .dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
