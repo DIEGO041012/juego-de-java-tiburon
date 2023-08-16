@@ -1,22 +1,57 @@
-// ... tu código existente ...
+    const movableImage = document.getElementById("movableImage");
+    const gameBoard = document.getElementById("game-board");
+    let imageX = 0;
+    let imageY = 0;
+    const moveStep = 60; // Ajusta esto según el tamaño de las celdas en tu juego
 
-const gameBoard = document.getElementById('game-board');
+    document.addEventListener("keydown", (event) => {
+        let nextImageX = imageX;
+        let nextImageY = imageY;
 
-function createMaze() {
-    for (let row = 0; row < maze.length; row++) {
-        const rowElement = document.createElement('div');
-        rowElement.classList.add('row');
-
-        for (let col = 0; col < maze[row].length; col++) {
-            if (maze[row][col] === 1) {
-                const cellElement = document.createElement('div');
-                cellElement.classList.add('cell', 'wall');
-                rowElement.appendChild(cellElement);
-            }
+        switch (event.key) {
+            case "ArrowUp":
+                nextImageY = Math.max(nextImageY - moveStep, 0);
+                break;
+            case "ArrowDown":
+                nextImageY = Math.min(nextImageY + moveStep, gameBoard.clientHeight - movableImage.clientHeight);
+                break;
+            case "ArrowLeft":
+                nextImageX = Math.max(nextImageX - moveStep, 0);
+                break;
+            case "ArrowRight":
+                nextImageX = Math.min(nextImageX + moveStep, gameBoard.clientWidth - movableImage.clientWidth);
+                break;
+            default:
+                return;
         }
 
-        gameBoard.appendChild(rowElement);
-    }
-}
+        const collisionElements = document.querySelectorAll('.wall');
 
-createMaze();
+        let collision = false;
+        const nextImageRect = movableImage.getBoundingClientRect();
+
+        collisionElements.forEach((element) => {
+            const elementRect = element.getBoundingClientRect();
+
+            if (
+                nextImageX + nextImageRect.width > elementRect.left &&
+                nextImageX < elementRect.left + elementRect.width &&
+                nextImageY + nextImageRect.height > elementRect.top &&
+                nextImageY < elementRect.top + elementRect.height
+            ) {
+                collision = true;
+            }
+        });
+
+        if (!collision) {
+            imageX = nextImageX;
+            imageY = nextImageY;
+            movableImage.style.left = `${imageX}px`;
+            movableImage.style.top = `${imageY}px`;
+        }
+    });
+
+
+
+
+

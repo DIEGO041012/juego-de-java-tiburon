@@ -1,201 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./sytlotiburon.css">
-    <link rel="stylesheet" href="./juego.js">
-    <title>Pac-Man Game</title>
-</head>
-<body>
-    <div id="game-board">
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Pac-Man Game</title>
+    </head>
+    <body>
+        <div id="game-board">
+            <div class="row">
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"><img class="buzos" src="buzos.jpg" alt=""></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="row">
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="wall"></div>
+            </div>
+            <img id="movableImage" src="depositphotos_54806883-stock-illustration-shark-illustration.jpg" alt="Imagen Movable">
         </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-        </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-        </div>
-        <div class="row">
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-            <div class="cell wall"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell empty"></div>
-            <div class="cell wall"></div>
-        
-    </div>
-    
-    
-   <!--  <script src="script.js">
-        const pacman = document.querySelector('.pacman');
-const gameBoard = document.getElementById('game-board');
-
-let pacmanX = 0;
-let pacmanY = 0;
-
-function movePacman(e) {
-    switch (e.key) {
-        case 'ArrowUp':
-            pacmanY -= 40;
-            break;
-        case 'ArrowDown':
-            pacmanY += 40;
-            break;
-        case 'ArrowLeft':
-            pacmanX -= 40;
-            break;
-        case 'ArrowRight':
-            pacmanX += 40;
-            break;
-    }
-
-    pacman.style.transform = `translate(${pacmanX}px, ${pacmanY}px)`;
-}
-
-document.addEventListener('keydown', movePacman);
-
-const maze = [
-    [1, 1, 1, 1, 1, 1],
-    [1, 0, 0, 0, 0, 1],
-    [1, 1, 1, 0, 0, 1],
-    [1, 0, 0, 0, 1, 1],
-    [1, 0, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1]
-];
-
-const gameBoard = document.getElementById('game-board');
-
-function createMaze() {
-    for (let row = 0; row < maze.length; row++) {
-        const rowElement = document.createElement('div');
-        rowElement.classList.add('row');
-
-        for (let col = 0; col < maze[row].length; col++) {
-            const cellElement = document.createElement('div');
-            cellElement.classList.add('cell');
-
-            if (maze[row][col] === 1) {
-                cellElement.classList.add('wall');
-            } else {
-                cellElement.classList.add('empty');
-            }
-
-            rowElement.appendChild(cellElement);
-        }
-
-        gameBoard.appendChild(rowElement);
-    }
-}
-
-createMaze(); -->
-
-    </script>
-</body>
-</html>
+        <script src="juego.js"></script>
+    </body>
+    </html>
