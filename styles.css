@@ -6,16 +6,12 @@ body {
     margin: 0;
     background-color: rgb(198, 200, 242);
 }
-.buzos{
-    width: 60px;
-    height: 60px;
-}
 
 #game-board {
     width: 600px;
     height: 600px;
     background-color: #7d6060;
-    border: 2px solid #fff;
+    border: 5px solid black;
     position: relative;
 }
 
@@ -24,16 +20,12 @@ body {
 }
 
 .empty {
-    border: 1px solid #72a5c3;
-    box-sizing: border-box;
     width: 60px;
     height: 60px;
     background-color: #72a5c3;
 }
 
 .wall {
-    border: 1px solid #72a5c3;
-    box-sizing: border-box;
     width: 60px;
     height: 60px;
     background-color: #856868;
@@ -48,3 +40,25 @@ body {
     transition: 0.2s ease-in-out;
 }
 
+.wall.collision {
+    background-color: red;
+}
+
+#movableImage.collision {
+    background-color: blue;
+}
+
+.buzos {
+    width: 60px;
+    height: 60px;
+    display: block; 
+}
+
+.arpon {
+    width: 60px;
+    height: 60px;
+}
+    
+#hiddenArpon {
+    display: none;
+}

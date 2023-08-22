@@ -1,135 +1,137 @@
     <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Pac-Man Game</title>
-    </head>
-    <body>
-        <div id="game-board">
-            <div class="row">
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"><img class="buzos" src="buzos.jpg" alt=""></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-            </div>
-            <div class="row">
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-                <div class="wall"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="empty"></div>
-                <div class="wall"></div>
-            </div>
-            <img id="movableImage" src="depositphotos_54806883-stock-illustration-shark-illustration.jpg" alt="Imagen Movable">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pac-Man Game</title>
+</head>
+<body>
+    <div id="game-board">
+        <div class="row">
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"><img class="buzos" src="buzo.png" alt=""></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"><img class="buzos" src="buzo.png" alt=""></div>
         </div>
-        <script src="juego.js"></script>
-    </body>
-    </html>
+        <div class="row">
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"><img class="buzos" src="buzo.png" alt=""></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="empty"><img class="buzos" src="buzo.png" alt=""></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+        </div>
+        <div class="row">
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+            <div class="empty"><img id="hiddenArpon" class="arpon" src="buzoArpon.jpg" alt="Arpón"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="wall"></div>
+        </div>
+        <img id="movableImage" src="tiburon2.png" alt="Imagen Movable">
+    </div>
+    <div id="countdown">Tiempo restante: 60 segundos</div>
+    <script src="juego.js"></script>
+</body>
+</html>
+
